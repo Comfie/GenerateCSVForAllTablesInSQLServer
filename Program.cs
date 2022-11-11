@@ -22,18 +22,18 @@ namespace GenerateCSVForAllTablesInSQLServer
         /// <param name="args">The args<see cref="string[]"/>.</param>
         internal static void Main(string[] args)
         {
+            // create string list of all the tables
             string[] tables = { "TEST" };
 
-            var datasource = @"."; //your server
-            var database = "SysproCompanyU"; //your database name
+            var datasource = @""; //your server
+            var database = ""; //your database name
             var username = "sa"; //username of server to connect
-            var password = "@Admin123"; //password
+            var password = ""; //password
             //your connection string
             var connString = @"Data Source=" + datasource + ";Initial Catalog="
                              + database + ";Persist Security Info=True;User ID=" + username + ";Password=" +
                              password;
             //create instanace of database connection
-
             var conn = new SqlConnection(connString);
 
             //create a new SQL Query using StringBuilder
